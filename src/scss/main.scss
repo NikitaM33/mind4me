@@ -1,0 +1,142 @@
+@import '~normalize.css';
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+.login {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+
+  &__inputForm {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    padding: 2.8rem 3.75rem 4.3rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 2rem;
+    z-index: 2;
+
+    & h2 {
+      font-size: 2.8rem;
+    }
+
+    @media screen and (max-width: 620px) {
+      border-radius: 0;
+    }
+
+    @media screen and (max-width: 425px) {
+      & h2 {
+        font-size: 2.7rem;
+        text-align: center;
+      }
+    }
+  }
+
+  &__form {
+    & label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+
+      &:nth-child(2) {
+        margin-bottom: 1.87rem;
+      }
+
+      & input {
+        padding: 1.187rem 1rem;
+        border-radius: 0.75rem;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  &__btn,
+  &__signup {
+    width: 100%;
+    padding: 1.25rem 0;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 0.75rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+
+  &__btn {
+    color: #1334d0;
+    background: #fff;
+    border: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: darken(#fff, 10%);
+    }
+  }
+
+  &__devider {
+    display: flex;
+    margin: 1rem 0;
+
+    & hr {
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      border: none;
+      opacity: 0.3;
+    }
+  }
+
+  &__or {
+    margin: 0 0.5rem;
+  }
+
+  &__signup {
+    margin-bottom: 1rem;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: #fff;
+      color: #1334d0;
+    }
+  }
+
+  &__forgot {
+    transition: 0.3s ease;
+
+    & a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+      text-align: center;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
